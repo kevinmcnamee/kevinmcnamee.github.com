@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://creekace.github.com
+title: Kevin McNamee
+subtitle: On the Long Road to Software Craftmanship.
+author: Kevin McNamee
 simple_search: http://google.com/search
 description:
 
@@ -93,7 +93,7 @@ disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-31161399-1
 
 # Facebook Like
 facebook_like: false
