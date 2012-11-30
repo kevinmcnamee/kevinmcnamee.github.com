@@ -5,6 +5,7 @@ date: 2012-07-22 19:13
 comments: true
 external-url: http://google.com
 categories: uptime
+published: false
 ---
 {% codeblock Time to be Awesome - awesome.rb %}
 puts "Awesome!" unless lame

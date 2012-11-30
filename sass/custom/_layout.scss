@@ -1,0 +1,28 @@
+#sidebar {
+  padding-left: 0%;
+}
+
+#sidebar form {
+	padding-left: 10px;
+}
+
+
+@media only screen and (min-width: 1300px) {
+  #sidebar {
+    padding-left: 0%;
+  }
+}
+
+.speakerdeck {
+	padding: 20px;
+}
+
+.right {
+	float: right;
+	margin-right: 50px;
+	margin-bottom: 10px;
+}
+
+.center {
+	margin: 0 auto;
+}

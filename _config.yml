@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://creekace.github.com
+url: http://kevmcnamee.com
 title: Kevin McNamee
-subtitle: On the Long Road to Software Craftmanship.
+subtitle: The Future is Unwritten.
 author: Kevin McNamee
 simple_search: http://google.com/search
 description:
@@ -89,8 +89,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: KevinMcNamee
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-31161399-1

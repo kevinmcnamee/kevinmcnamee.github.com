@@ -14,7 +14,7 @@ body {
 
 #sidebar {
   width: 27%;
-  padding-left: 1.5%;
+  padding-left: 0%;
   min-width: 240px;
   position: fixed;
   min-height: 100%;
@@ -149,7 +149,7 @@ header#sidebar h2#subtitle {
 @media only screen and (min-width: 1300px) {
   #sidebar {
     margin-left: 0;
-    padding-left: 2%;
+    padding-left: 0%;
   }
 
   aside#logo {
@@ -303,11 +303,11 @@ section.comments {
 }
 
 article.post h2, article.post p {
-  max-width: 500px;
+  max-width: 90%;
 }
 
 article.post figure {
-  max-width: 500px;
+  max-width: 90%;
 }
 
 // Anchor
