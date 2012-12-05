@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Kevin McNamee</title>
+  <title>Usage of Modules as Mixins in Ruby - Kevin McNamee</title>
   <meta name="author" content="Kevin McNamee">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kevinmcnamee.github.com/">
+  <link rel="canonical" href="http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -106,26 +106,19 @@
 
   </header>
   <section id="main">
-      
-  
-  
     <article class="post">
-      <div class="sharing-box">
+  <div class="sharing-box">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kevinmcnamee.github.com/index.html" data-via="mcnameekm" data-counturl="http://kevinmcnamee.github.com/index.html" data-size="large">Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/" data-via="mcnameekm" data-counturl="http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/" data-size="large">Tweet</a>
   
   
   
 </div>
 
-      
+  
   <header>
     
-      <h2 class="entry-title">
-        
-        <a href="/blog/2012/10/20/uses-for-modules-in-ruby/">Usage of Modules as Mixins in Ruby</a>
-        
-      </h2>
+      <h2 class="entry-title">Usage of Modules as Mixins in Ruby</h2>
     
     
       <p class="meta">
@@ -143,14 +136,14 @@
 
 <time datetime="2012-10-20T08:19:00-04:00" pubdate data-updated="true">Oct 20<span>th</span>, 2012</time>
         
-         | <a href="/blog/2012/10/20/uses-for-modules-in-ruby/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <p>Modules are similar to classes except they don&#8217;t have instances and don&#8217;t have subclasses. In ruby, modules can provide value in a wide range of uses. Modules collect related methods and constants in one singular location to share  behavior across classes. Mixins allow for exactly this.</p>
+<p>Modules are similar to classes except they don&#8217;t have instances and don&#8217;t have subclasses. In ruby, modules can provide value in a wide range of uses. Modules collect related methods and constants in one singular location to share  behavior across classes. Mixins allow for exactly this.</p>
 
 <p>Without even writing a module, you are using mixins everyday throughout your ruby programs. You are most likely utilizing enumerables everyday. Enumerables are just modules built into ruby&#8217;s standard library. Enumerables are a set of methods that are accessable across all classes in ruby. To visualize this, let&#8217;s take a look at what we see if we check for the ancestors of the <code>Array</code> class in irb:</p>
 
@@ -270,187 +263,16 @@
 
 <p>Mixins are great for abstracting behaviors from your classes and ensuring you do are not creating duplicate code in your programs. This is a basic overview of using modules as mixins. Modules can flex the power of your ruby code in much deeper ways including a replacement of monkey patching your code as well as namespacing. Look for more in depth posts on each of these topics in the future.</p>
 
-  
-  
 
 
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kevinmcnamee.github.com/index.html" data-via="mcnameekm" data-counturl="http://kevinmcnamee.github.com/index.html" data-size="large">Tweet</a>
-  
-  
-  
+</article>
+
+  <section class="comments">
+    <h2>Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
 
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby/">A Brief Overview of Programming the Web With Ruby</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-14T18:39:00-04:00" pubdate data-updated="true">Oct 14<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <p>Programming for the web is limited only by the person or persons behind the keyboard. Programming for the web with Ruby has an elegance and positive energy which pulls me in. I recently came across a great Speaker Deck slide from <a href="https://github.com/rgua">&#8216;RailsGirls Ukraine&#8217;</a> which I will use to explain a brief overview of programming for the web using Ruby.</p>
-
-<div class='speakerdeck center' style='width: 400px;'>
-<script async class="speakerdeck-embed" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<h2>Computers Are Dumb</h2>
-
-<div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="2" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="3" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<p>Contrary to popular belief, computers are stupid. They do exactly what you tell them to do. If I tell you to make me a grilled cheese sandwich, I can expect at a minimum a couple of slices of bread with melted cheese in the middle. If I request the same from a computer, I will get nothing. I have to tell the computer a series of hundreds of commands to explain every minute detail to get my sandwich.</p>
-
-<p>Programming is telling a computer exactly what you want it to do.</p>
-
-<h2>Doing it All with Ruby</h2>
-
-<p>The Ruby programming language was created in 1995 by Yukihiro Matsumoto (also known as &#8216;Matz&#8217;). Matz created the Ruby language because he wanted to simply create programs in a language that made him happy. This thought process is reflective throughout the Ruby community. In fact there is a well know acronym within the Ruby community known as MINSWAN (Matz is nice so we are nice).</p>
-
-<p>The Ruby language is desinged to emphasize human readability rather than machine readability. As reflected in the aforementioned Speaker Deck, take a look at the following code written in a C language followed by the same output written in Ruby.</p>
-
-<figure class='code'><figcaption><span>holler.cpp </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">int</span> <span class="n">main</span> <span class="p">()</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello blog reader number 1!&quot;</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and, now the Ruby version</p>
-
-<figure class='code'><figcaption><span>holler.rb </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Hello blog reader number 1!&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Seriously, Ruby is that much more awesomer!</p>
-
-<h2>How the Web Works</h2>
-
-<div class='speakerdeck center' style='width: 300px;'>
-<script async class="speakerdeck-embed" data-slide="8" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<p>The internet is comprised of billions of unique IP addresses. Every machine, from your computer to your smartphone to the server that displays your favorite website, is communicating through this unique address.</p>
-
-<p>It is nearly impossible for you to remember the IP address of any single website, let alone all of the websites you enjoy visiting. For this reason, we use Domain Name Servers (DNS) to assign each website to a human readable domain name.</p>
-
-<h2>The Anatomy of a Website</h2>
-
-<p>Now that you know how we communicate with a website, the fun part begins! Most websites you visit are &#8220;Dynamic&#8221; in that they process data on the server side based on continuous input/output. These websites use applications, databases, and servers in order to offer up a multitude of content. Let&#8217;s use the RailsGirls presentation to look a little deeper.</p>
-
-<div style="clear:both"></div>
-
-
-
-
-<div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="12" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<h3>The Client</h3>
-
-<p>On the web, the &#8220;Client&#8221; refers to the end user. In most cases, this is the web browser on your computer or smartphone. This browser is what we use to communicate with the Application, Database, and Web Server.</p>
-
-<div style="clear:both"></div>
-
-
-<h3>Application</h3>
-
-<div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="14" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<p>The application is the brains behind any website. While all components of a website rely on each other equally, the application is the center, the leader, the guy everyone else in the stack follows. This is where the Ruby programming language comes into play. You can see on the slide to the right that there are many possible languages written for the web. Although Ruby is certainly not the only language to program for the web, I love Ruby and you should too!</p>
-
-<div style="clear:both"></div>
-
-
-<h3>Database</h3>
-
-<div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="15" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<p>The database is where all of the information on a website or web application is stored. How do you think Instagram keeps track of all of the awesome pictures you&#8217;ve taken lately? The application communicates with the database everytime you login, accesses all of your information, and serves it to you (the client). See, it all makes sense now!</p>
-
-<div style="clear:both"></div>
-
-
-<h3>Web Server</h3>
-
-<div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="16" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-
-
-<p>As we learned earlier, the web server is how where all communication on the web happens. Think of the web server as a highway with a ton of roads (and no speeding tickets!). There are several types of servers but they all share a similar purpose, COMMUNICATION.</p>
-
-<div style="clear:both"></div>
-
-
-<p>So, there you have it. A very basic overview of how the internets work. This is my first post, things will get a bit more complicated from here!</p>
-
-<p>Thanks to RailsGirls Ukraine for putting together this awesome visual for me to use!</p>
-
-  
-  
-
-
-    </article>
-  
 
     <nav role="navigation" id="pagination">
 
@@ -464,7 +286,10 @@
       var disqus_shortname = 'KevinMcNamee';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/';
+        var disqus_url = 'http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

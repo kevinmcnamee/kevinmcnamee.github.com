@@ -1,156 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Kevin McNamee</title>
-  <meta name="author" content="Kevin McNamee">
-
-  
-  <meta name="description" content="Tweet Usage of Modules as Mixins in Ruby Oct 20th, 2012 | Comments Modules are similar to classes except they don&#8217;t have instances and don&# &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://kevinmcnamee.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Kevin McNamee" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-31161399-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body >
-  <header role="banner" id="sidebar">
-    <!-- Logo -->
-<aside id="logo" class="clearfix">
-  <div class="clearfix">
-    <a href="/">Kevin McNamee</a>
-  </div>
-</aside>
-
-<ul id="menu">
-
-  <li class="title">
-    <h1 id="title"><a href="/">Kevin McNamee</a></h1>
-  </li>
-
-
-  <li class="subtitle">
-    <h2 id="subtitle">The Future is Unwritten.</h2>
-  </li>
-
-  <li class="link">
-    <a href="/about/">about</a>
-  </li>
-
-  <li class="link">
-    <a href="http://twitter.com/mcnameekm/">twitter</a>
-  </li>
-
-
-  <li class="link">
-    <a href="http://github.com/creekace/">github</a>
-  </li>
-
-  <li class="link rss">
-    <a href="/atom.xml">rss feed</a>
-  </li>
-</ul>
-
-
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:kevinmcnamee.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-
-
-<!-- Octopress Love -->
-<aside id="octopress_linkback">
-  <a href="http://octopress.org/">
-    <span class="unicode_square">
-      <span class="unicode_circle">
-        &nbsp;
-      </span>
-    </span>
-    <span class="octopress">Powered by Octopress</span>
-  </a>
-</aside>
-
-  </header>
-  <section id="main">
-      
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kevinmcnamee.github.com/index.html" data-via="mcnameekm" data-counturl="http://kevinmcnamee.github.com/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
+  <title><![CDATA[Kevin McNamee]]></title>
+  <link href="http://kevinmcnamee.github.com/atom.xml" rel="self"/>
+  <link href="http://kevinmcnamee.github.com/"/>
+  <updated>2012-12-05T12:41:05-05:00</updated>
+  <id>http://kevinmcnamee.github.com/</id>
+  <author>
+    <name><![CDATA[Kevin McNamee]]></name>
     
-      <h2 class="entry-title">
-        
-        <a href="/blog/2012/10/20/uses-for-modules-in-ruby/">Usage of Modules as Mixins in Ruby</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2012-10-20T08:19:00-04:00" pubdate data-updated="true">Oct 20<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/20/uses-for-modules-in-ruby/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <p>Modules are similar to classes except they don&#8217;t have instances and don&#8217;t have subclasses. In ruby, modules can provide value in a wide range of uses. Modules collect related methods and constants in one singular location to share  behavior across classes. Mixins allow for exactly this.</p>
+  <entry>
+    <title type="html"><![CDATA[Usage of Modules as Mixins in Ruby]]></title>
+    <link href="http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/"/>
+    <updated>2012-10-20T08:19:00-04:00</updated>
+    <id>http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby</id>
+    <content type="html"><![CDATA[<p>Modules are similar to classes except they don&#8217;t have instances and don&#8217;t have subclasses. In ruby, modules can provide value in a wide range of uses. Modules collect related methods and constants in one singular location to share  behavior across classes. Mixins allow for exactly this.</p>
 
 <p>Without even writing a module, you are using mixins everyday throughout your ruby programs. You are most likely utilizing enumerables everyday. Enumerables are just modules built into ruby&#8217;s standard library. Enumerables are a set of methods that are accessable across all classes in ruby. To visualize this, let&#8217;s take a look at what we see if we check for the ancestors of the <code>Array</code> class in irb:</p>
 
@@ -266,74 +134,33 @@
 
 <p>When a method is passed to an instance of the <code>Movie</code> class, it will first look in the <code>Movie</code> class for the behavior of that method. If the the instance does not find that method in it&#8217;s direct class, it will start going up the chain of superclasses to find the method behavior. Before checking the next direct superclass, the instance will check for a method in the direct module. If no module exists, the class instance will only then look in direct superclass. The image visualizes this action.</p>
 
-<p><img class="[class]" src="/images/modules.jpg"></p>
+<p><img class="[class]" src="http://kevinmcnamee.github.com/images/modules.jpg"></p>
 
 <p>Mixins are great for abstracting behaviors from your classes and ensuring you do are not creating duplicate code in your programs. This is a basic overview of using modules as mixins. Modules can flex the power of your ruby code in much deeper ways including a replacement of monkey patching your code as well as namespacing. Look for more in depth posts on each of these topics in the future.</p>
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kevinmcnamee.github.com/index.html" data-via="mcnameekm" data-counturl="http://kevinmcnamee.github.com/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
-
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby/">A Brief Overview of Programming the Web With Ruby</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-14T18:39:00-04:00" pubdate data-updated="true">Oct 14<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <p>Programming for the web is limited only by the person or persons behind the keyboard. Programming for the web with Ruby has an elegance and positive energy which pulls me in. I recently came across a great Speaker Deck slide from <a href="https://github.com/rgua">&#8216;RailsGirls Ukraine&#8217;</a> which I will use to explain a brief overview of programming for the web using Ruby.</p>
+  <entry>
+    <title type="html"><![CDATA[A Brief Overview of Programming the Web with Ruby]]></title>
+    <link href="http://kevinmcnamee.github.com/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby/"/>
+    <updated>2012-10-14T18:39:00-04:00</updated>
+    <id>http://kevinmcnamee.github.com/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby</id>
+    <content type="html"><![CDATA[<p>Programming for the web is limited only by the person or persons behind the keyboard. Programming for the web with Ruby has an elegance and positive energy which pulls me in. I recently came across a great Speaker Deck slide from <a href="https://github.com/rgua">&#8216;RailsGirls Ukraine&#8217;</a> which I will use to explain a brief overview of programming for the web using Ruby.</p>
 
 <div class='speakerdeck center' style='width: 400px;'>
-<script async class="speakerdeck-embed" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
 <h2>Computers Are Dumb</h2>
 
 <div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="2" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="2" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
 <div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="3" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="3" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
@@ -376,7 +203,7 @@
 <h2>How the Web Works</h2>
 
 <div class='speakerdeck center' style='width: 300px;'>
-<script async class="speakerdeck-embed" data-slide="8" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="8" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
@@ -394,7 +221,7 @@
 
 
 <div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="12" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="12" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
@@ -408,7 +235,7 @@
 <h3>Application</h3>
 
 <div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="14" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="14" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
@@ -420,7 +247,7 @@
 <h3>Database</h3>
 
 <div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="15" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="15" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
@@ -432,7 +259,7 @@
 <h3>Web Server</h3>
 
 <div class='speakerdeck right' style='width: 200px;'>
-<script async class="speakerdeck-embed" data-slide="16" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="16" data-id="50701165dbcbfb00020788d6" data-ratio="1.3333333333333333" src="http://kevinmcnamee.github.com//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 
@@ -444,53 +271,7 @@
 <p>So, there you have it. A very basic overview of how the internets work. This is my first post, things will get a bit more complicated from here!</p>
 
 <p>Thanks to RailsGirls Ukraine for putting together this awesome visual for me to use!</p>
-
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-
-    <nav role="navigation" id="pagination">
-
-</nav>
-  </section>
-  
-
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'KevinMcNamee';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-</body>
-</html>
+</feed>

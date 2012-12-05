@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>
+            http://kevinmcnamee.github.com/blog/2012/10/14/an-introduction-to-programming-the-web-with-ruby/
+        </loc>
+        <lastmod>2012-10-15T08:18:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kevinmcnamee.github.com/blog/2012/10/20/uses-for-modules-in-ruby/</loc>
+        <lastmod>2012-10-22T09:47:19-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kevinmcnamee.github.com/about/</loc>
+        <lastmod>2012-10-12T19:37:04-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kevinmcnamee.github.com/blog/archives/</loc>
+        <lastmod>2012-10-22T09:47:19-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kevinmcnamee.github.com/</loc>
+        <lastmod>2012-10-22T09:47:19-04:00</lastmod>
+    </url>
+</urlset>
