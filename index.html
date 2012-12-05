@@ -9,7 +9,7 @@
   <meta name="author" content="Kevin McNamee">
 
   
-  <meta name="description" content="Tweet Usage of Modules as Mixins in Ruby Oct 20th, 2012 | Comments Modules are similar to classes except they don&#8217;t have instances and don&# &hellip;">
+  <meta name="description" content="Tweet Why You Don&#8217;t Need Has and belongs to many Relationships Nov 7th, 2012 | Comments When mapping associations between models in your Rails &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +107,161 @@
   </header>
   <section id="main">
       
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kevinmcnamee.github.com/index.html" data-via="mcnameekm" data-counturl="http://kevinmcnamee.github.com/index.html" data-size="large">Tweet</a>
+  
+  
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2012/11/07/why-you-dont-need-has-and-belongs-to-many-relationships/">Why You Don&#8217;t Need Has and belongs to many Relationships</a>
+        
+      </h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-07T09:02:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/07/why-you-dont-need-has-and-belongs-to-many-relationships/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <p>When mapping associations between models in your Rails application, you will inevitably come to a point when two models both &#8216;has&#8217; and &#8216;belongs_to&#8217; each other. In this situation, you need to choose between a has_many :through relationship and a has_and_belongs_to_many relationship.</p>
+
+<p>Given the ease and minimal keystrokes needed, you might think a has_and_belongs_to_many relationship is the way to go. I mean, it is an association built into the ethers of Active Record, so it must be the path to choose right? Wrong. When creating associations between models, you almost never know how this relationship will blossom as your application grows. I want to show you how potentially dangerous a has_and_belongs_to_many relationship can turn out. By taking a few steps upfront to setup a solid has_many :through relationship with an associated join table, you provide yourself with a huge amount of flexibility down the road.</p>
+
+<p>Let&#8217;s start by explaining the usage of these similar but distinctly exclusive association types. We will use the all too familiar association between cops and perpetrators:</p>
+
+<h3>has_and_belongs_to_many</h3>
+
+<p>This script to setup this association is dangerously simple. I&#8217;ll show a little later in this post how this can blow up in your face.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Cop</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_and_belongs_to_many</span> <span class="ss">:perps</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Perp</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_and_belongs_to_many</span> <span class="ss">:cops</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>has_many :through</h3>
+
+<p>A has_many :through association is used to setup a many to many relationship with another model in your application. This assocation uses a join table to connect the models allowing each to both &#8216;has&#8217; and &#8216;belong_to&#8217; each model. In this case, our cop can have many perps to bust and our perps can belong to the many cops who will inevitably violate them.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Cop</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:cop_perps</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:perps</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:cop_perps</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Perp</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:cop_perps</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:cops</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:cop_perps</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">CopPerp</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:cop</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:perps</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This relationship now allows for extending the association within the join table. There are a few additional steps you need to take to setup this association that are not necessary for the previous example. First, you must create a migration for the perps table and insert belongs_to associations for the other models. You also need to create an additional line of code on each <code>Cop</code> and <code>Perp</code> tables.</p>
+
+<p>The extra 10 minutes you take to setup this association will potentially save you hours of work and headache if you decide you now need to extend the cop_perps table in the future.</p>
+
+<h3>When to use has_and_belongs_to_many (hint: never)</h3>
+
+<p><a href="http://guides.rubyonrails.org/association_basics.html#choosing-between-has_many-through-and-has_and_belongs_to_many">Rails Guides</a> says that &#8220;You should use has_many :through if you need validations, callbacks, or extra attributes on the join model&#8221;. As the great coding philosopher <a href="http://shitavisays.tumblr.com/">Avi Flombaum</a> once eluded, how can you possibly know that your join model will not serve an additional purpose this early in the application process. No matter where you are in the development stage, you can never see so far in the future to know you will not need to extend the join table.</p>
+
+<p>For instance, what if we want to add some more information to how a cop and his perp are associated? In the case of the has_many :through association, we can change the name of CopPerp model to Tickets, add a migration to change the table name from cops_perps to tickets, and update the associations in the models. Now we can add information to the Tickets model such as time of arrest, court date, status, etc.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Cop</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:tickets</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:perps</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:tickets</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Perp</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:tickets</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:cops</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:tickets</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Ticket</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:cop</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:perps</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This task is much more difficult had we used the has_and_belongs_to_many association. We would have to go back and manually create the join table and has_many :through associations. Otherwise, the only information we could ever access is that a cop belongs to a perp and a perp belongs to a cop.</p>
+
+<p>What do you think of this theory? Can you offer a reason where you absolutely think using a has_and_belongs_to_many association is superior to has_many :through?</p>
+
+  
+  
+
+
+    </article>
   
   
     <article class="post">
