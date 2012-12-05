@@ -79,7 +79,3 @@ end
 This task is much more difficult had we used the has\_and\_belongs\_to\_many association. We would have to go back and manually create the join table and has\_many :through associations. Otherwise, the only information we could ever access is that a cop belongs to a perp and a perp belongs to a cop.
 
 What do you think of this theory? Can you offer a reason where you absolutely think using a has\_and\_belongs\_to\_many association is superior to has\_many :through?
-
-And now I leave you with those immortal words from Eazy-E and the gang:
-
-<iframe width="480" height="360" src="http://www.youtube.com/embed/WiX7GTelTPM" frameborder="0" allowfullscreen></iframe>
